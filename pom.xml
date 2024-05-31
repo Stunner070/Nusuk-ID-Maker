@@ -8,10 +8,15 @@
 
     <properties>
         <java.version>21</java.version>
-        <javafx.version>17.0.1</javafx.version>
+        <javafx.version>23-ea+20</javafx.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>23-ea+20</version>
+        </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
