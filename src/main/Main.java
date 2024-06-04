@@ -4,12 +4,7 @@ import Controllers.FrontPageController;
 import Controllers.MainCtrl;
 import com.google.inject.Injector;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.util.Objects;
 
 import static com.google.inject.Guice.createInjector;
 
@@ -24,7 +19,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        var frontPage = FXML.load(FrontPageController.class, "resources", "Scenes", "frontPage.fxml");
+        var frontPage = FXML.load(FrontPageController.class, "scenes/test.fxml");
 
         var mainctrl = injector.getInstance(MainCtrl.class);
         mainctrl.initialize(primaryStage, frontPage);

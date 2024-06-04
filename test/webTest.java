@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class webTest {
 
@@ -18,7 +18,7 @@ public class webTest {
         browser = new ChromeDriver();
         browser.get("https://mvnrepository.com/artifact/org.seleniumhq.selenium");
         WebElement title = browser.findElement(By.tagName("h1"));
-        Assertions.assertEquals("Group: SeleniumHQ Selenium", title.getText());
+        assertEquals("Group: SeleniumHQ Selenium", title.getText());
     }
 
     @Test
@@ -26,7 +26,7 @@ public class webTest {
         browser = new EdgeDriver();
         browser.get("https://mvnrepository.com/artifact/org.seleniumhq.selenium");
         WebElement title = browser.findElement(By.tagName("h1"));
-        Assertions.assertEquals("Group: SeleniumHQ Selenium", title.getText());
+        assertEquals("Group: SeleniumHQ Selenium", title.getText());
     }
 
     @Test
