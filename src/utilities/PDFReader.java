@@ -1,9 +1,8 @@
-package commons;
+package utilities;
 
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
-import org.openqa.selenium.devtools.v123.domsnapshot.model.StringIndex;
 
 import java.io.File;
 import java.io.IOException;
