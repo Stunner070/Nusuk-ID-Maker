@@ -19,7 +19,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        var frontPage = FXML.load(FrontPageController.class, "scenes/frontPage.fxml");
+        var frontPage = FXML.load(FrontPageController.class, "scenes/eee.fxml");
 
         var mainctrl = injector.getInstance(MainCtrl.class);
         mainctrl.initialize(primaryStage, frontPage);
