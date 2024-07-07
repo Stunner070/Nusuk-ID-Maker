@@ -15,6 +15,7 @@ import utilities.PDFFinder;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -35,6 +36,8 @@ public class FrontPageController implements Initializable {
     @FXML
     private Text noPDFsText;
 
+    private List<File> files = new ArrayList<>();
+
     @Inject
     public FrontPageController(MainCtrl mainCtrl) {
         this.mainCtrl = mainCtrl;
@@ -46,10 +49,14 @@ public class FrontPageController implements Initializable {
     }
 
     public void uploadPDFs() throws IOException {
-        List<File> files = pdfFinder.findPDF();
+        files = pdfFinder.findPDF();
         if(files == null || files.isEmpty()){
             labelService.showNoPDFsText(noPDFsText);
         }
+        mainCtrl.showPersonsPage();
     }
 
+    public List<File> getFiles() {
+        return files;
+    }
 }

@@ -2,6 +2,7 @@ package main;
 
 import Controllers.FrontPageController;
 import Controllers.MainCtrl;
+import Controllers.PersonsPageController;
 import com.google.inject.Injector;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -19,10 +20,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        var frontPage = FXML.load(FrontPageController.class, "scenes/eee.fxml");
+        var frontPage = FXML.load(FrontPageController.class, "scenes/frontPage.fxml");
+        var personsPage = FXML.load(PersonsPageController.class, "scenes/personsPage.fxml");
 
         var mainctrl = injector.getInstance(MainCtrl.class);
-        mainctrl.initialize(primaryStage, frontPage);
+        mainctrl.initialize(primaryStage, frontPage, personsPage);
 
     }
 }
