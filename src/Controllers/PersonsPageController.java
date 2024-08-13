@@ -1,7 +1,7 @@
 package Controllers;
 
+import com.google.inject.Inject;
 import commons.Person;
-import jakarta.inject.Inject;
 import utilities.PDFReader;
 import utilities.PersonMaker;
 
@@ -18,7 +18,6 @@ public class PersonsPageController {
     @Inject
     public PersonsPageController(MainCtrl mainCtrl) {
         this.mainCtrl = mainCtrl;
-        this.files = mainCtrl.getFiles();
         this.reader = new PDFReader();
     }
 
